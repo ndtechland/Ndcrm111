@@ -27,11 +27,11 @@ namespace NdCRM.Controllers
             return View();
         }
 
-        public ActionResult Dashboard()
+        public IActionResult Dashboard()
         {
             return View();
         }
-        public ActionResult Login()
+        public IActionResult Login()
         {
             return View();
         }
