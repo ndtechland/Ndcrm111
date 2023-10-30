@@ -1,0 +1,154 @@
+﻿@*@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}*@
+<style>
+    .center {
+        text-align: center;
+        margin-left: -94px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bigdeal admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Bigdeal admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/favicon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon/favicon.png" type="image/x-icon">
+    <title>ND-CRM</title>
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+
+    <!-- slick icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick-theme.css">
+
+    <!-- jsgrid css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/jsgrid.css">
+
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css">
+
+</head>
+<body>
+
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper center">
+        <div class="authentication-box">
+            <div class="container">
+                <div class="row ">
+
+                    <center>
+                        <div class="col-10 p-0 card-right ">
+                            <div class="card tab2-card">
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="top-profile-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="true"><span class="icon-user me-2"></span>Login</a>
+                                        </li>
+                                        @*<li class="nav-item">
+                                        <a class="nav-link" id="contact-top-tab" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false"><span class="icon-unlock me-2"></span>Register</a>
+                                        </li>*@
+                                    </ul>
+                                    <div class="tab-content" id="top-tabContent">
+                                        <div class="tab-pane fade show active" id="top-profile" role="tabpanel" aria-labelledby="top-profile-tab">
+                                            <form class="form-horizontal auth-form">
+                                                <div class="form-group">
+                                                    <input required="" name="login[username]" type="email" class="form-control" placeholder="Username" id="exampleInputEmail1">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input required="" name="login[password]" type="password" class="form-control" placeholder="Password">
+                                                </div>
+                                                <div class="form-terms">
+                                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                                        <div class="form-check">
+                                                            @*<input class="form-check-input custom-control-input" type="checkbox" value="" id="customControlAutosizing">
+                                                            <label class="form-check-label" for="customControlAutosizing">Remember me</label>*@
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="btn btn-default forgot-pass">
+                                                            Forgot Password
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-button">
+                                                    <button class="btn btn-primary" type="submit">Login</button>
+                                                </div>
+                                                @*<div class="form-footer">
+                                                <span>Or Login up with social platforms</span>
+                                                <ul class="social">
+                                                <li><a class="icon-facebook" href=""></a></li>
+                                                <li><a class="icon-twitter" href=""></a></li>
+                                                <li><a class="icon-instagram" href=""></a></li>
+                                                <li><a class="icon-pinterest" href=""></a></li>
+                                                </ul>
+                                                </div>*@
+                                            </form>
+                                        </div>
+                                        @*  <div class="tab-pane fade" id="top-contact" role="tabpanel" aria-labelledby="contact-top-tab">
+                                        <form class="form-horizontal auth-form">
+                                        <div class="form-group">
+                                        <input required="" name="login[username]" type="email" class="form-control" placeholder="Username" id="exampleInputEmail12">
+                                        </div>
+                                        <div class="form-group">
+                                        <input required="" name="login[password]" type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                        <input required="" name="login[password]" type="password" class="form-control" placeholder="Confirm Password">
+                                        </div>
+                                        <div class="form-terms">
+                                        <div class="custom-control custom-checkbox form-check mr-sm-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="customControlAutosizing1">
+                                        <label class="custom-control-label form-check-label" for="customControlAutosizing1"><span>I agree all statements in <a href="" class="pull-right">Terms &amp; Conditions</a></span></label>
+                                        </div>
+                                        <!-- <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Default checkbox
+                                        </label>
+                                        </div> -->
+                                        </div>
+                                        <div class="form-button">
+                                        <button class="btn btn-primary" type="submit">Register</button>
+                                        </div>
+                                        <div class="form-footer">
+                                        <span>Or Sign up with social platforms</span>
+                                        <ul class="social">
+                                        <li><a class="icon-facebook" href=""></a></li>
+                                        <li><a class="icon-twitter" href=""></a></li>
+                                        <li><a class="icon-instagram" href=""></a></li>
+                                        <li><a class="icon-pinterest" href=""></a></li>
+                                        </ul>
+                                        </div>
+                                        </form>
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+
+                </div>
+                @*                <a href="/Home/Dashboard" class="btn btn-primary back-btn"><i data-feather="arrow-left"></i>back</a>
+                *@
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
