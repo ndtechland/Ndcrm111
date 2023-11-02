@@ -2,6 +2,7 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }*@
+
 <style>
     .center {
         text-align: center;
@@ -45,6 +46,11 @@
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/admin.css">
 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -68,12 +74,12 @@
                                     </ul>
                                     <div class="tab-content" id="top-tabContent">
                                         <div class="tab-pane fade show active" id="top-profile" role="tabpanel" aria-labelledby="top-profile-tab">
-                                            <form class="form-horizontal auth-form">
+                                            <form class="form-horizontal auth-form" asp-action="adminLogin">
                                                 <div class="form-group">
-                                                    <input required="" name="login[username]" type="ContactPersonName" class="form-control" placeholder="Username" id="exampleInputEmail1">
+                                                    <input required=""  name="UserName" class="form-control" placeholder="Username" id="exampleInputEmail1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input required="" name="login[password]" type="password" class="form-control" placeholder="Password">
+                                                    <input required=""  name="Password" type="password" class="form-control" placeholder="Password">
 
                                                 </div>
                                                 <div class="form-terms">
@@ -88,9 +94,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-button">
-                                                    @*<button class="btn btn-primary" type="submit">Login</button>*@
-                                                    <a href="/Home/Dashboard" class="btn btn-primary">Login</a>
-                                                </div>
+                                                    <input type="submit" id="btnsubmit" class="btn btn-primary" value="Login"/>
+                                                    @*<button class="btn btn-primary" id="btnlogin" type="button">Login</button>*@
+@*                                                    <a href="/Home/Dashboard" class="btn btn-primary">Login</a>
+*@                                                </div>
 
                                                 @*<div class="form-footer">
                                                 <span>Or Login up with social platforms</span>
@@ -154,3 +161,4 @@
     </div>
 </body>
 </html>
+<script src="~/assets/customjs/adminlogin.js"></script>
