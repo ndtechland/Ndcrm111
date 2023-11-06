@@ -27,11 +27,6 @@ namespace NdCRM.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public IActionResult Dashboard()
         {
             return View();
@@ -41,7 +36,7 @@ namespace NdCRM.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult adminLogin(Login Logindetails)
+        public IActionResult adminLogin(Login Logindetails)
         {
             try
             {
@@ -70,11 +65,10 @@ namespace NdCRM.Controllers
                 throw ex;
             }
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Product()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
+
     }
 }
